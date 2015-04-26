@@ -1,11 +1,11 @@
 hw2.define([
     'fs',
     'path',
-    'hw2!PATH_JS_LIB:nodejs/filesystem/include.js'
+    'hw2!{PATH_JS_LIB}nodejs/filesystem/include.js'
 ], function Filesystem (fs, path) {
     var $ = this;
 
-    return $.NodeJs.Filesystem = $.class([
+    return $.NodeJs.Filesystem = $.class(
         $.public.static({
             remove: function (target, callback) {
                 var deferred = $.Async.defer(callback);
@@ -71,14 +71,14 @@ hw2.define([
                 wr.on("close", function (ex) {
                     var promises = [];
                     if (options.keepMTime == true) {
-                        var deferred = $.Q.defer();
+                        var deferred = $.Async.defer();
                         promises.push(deferred);
                         var stat = fs.stat(source, function () {
                             fs.utimes(target, stat.atime, stat.mtime, deferred.resolve);
                         });
                     }
 
-                    $.Q.all(promises).then(function () {
+                    $.Async.all(promises).then(function () {
                         done();
                     });
                 });
@@ -170,5 +170,5 @@ hw2.define([
                 return deferred.promise;
             }
         })
-    ]);
+    );
 });

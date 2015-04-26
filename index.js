@@ -6,8 +6,8 @@
 'use strict';
 
 hw2.define([
-    'hw2!PATH_JS_LIB:nodejs/git/include.js',
-    'hw2!PATH_JS_LIB:nodejs/git/Filesystem.js'
+    'hw2!{PATH_JS_LIB}nodejs/git/include.js',
+    'hw2!{PATH_JS_LIB}nodejs/git/Filesystem.js'
 ],function () {
     var $ = this;
 });
