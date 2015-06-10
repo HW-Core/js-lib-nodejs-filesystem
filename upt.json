@@ -1,5 +1,5 @@
 {
-  "name": "hwcore/modulesjs/src/library/nodejs/filesystem/tests",
+  "name": "hwcore/modules/js/src/library/nodejs/filesystem/tests",
   "dependencies": {
     "%parent": "hw-core/js-library-nodejs-filesystem"
   },
