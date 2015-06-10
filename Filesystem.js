@@ -1,7 +1,7 @@
-hw2.define([
+hwc.define([
     'fs',
     'path',
-    'hw2!{PATH_JS_LIB}nodejs/filesystem/include.js'
+    'hwc!{PATH_JS_LIB}nodejs/filesystem/include.js'
 ], function Filesystem (fs, path) {
     var $ = this;
 
