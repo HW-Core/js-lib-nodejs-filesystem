@@ -1,7 +1,7 @@
 {
-  "name": "hw2/modules/js/src/library/nodejs/filesystem/doc",
+  "name": "hwcore/modulesjs/src/library/nodejs/filesystem/doc",
   "dependencies": {
-    "%parent": "hw2-core/js-library-nodejs-filesystem"
+    "%parent": "hw-core/js-library-nodejs-filesystem"
   },
   "keep": [
     ".git/config"
