@@ -7,6 +7,20 @@ hwc.define([
 
     return $.NodeJs.Filesystem = $.class(
         $.public.static({
+            /**
+             * This function allow to use existsSync in new nodejs versions
+             * @param {type} filePath
+             * @returns {Boolean}
+             */
+            existsSync: fs.existsSync || function (filePath) {
+                try {
+                    fs.statSync(filePath);
+                } catch (err) {
+                    if (err.code == 'ENOENT')
+                        return false;
+                }
+                return true;
+            },
             remove: function (target, callback) {
                 var deferred = $.Async.defer(callback);
 
@@ -170,5 +184,5 @@ hwc.define([
                 return deferred.promise;
             }
         })
-    );
+        );
 });

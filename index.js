@@ -6,8 +6,8 @@
 'use strict';
 
 hwc.define([
-    'hwc!{PATH_JS_LIB}nodejs/git/include.js',
-    'hwc!{PATH_JS_LIB}nodejs/git/Filesystem.js'
+    'hwc!{PATH_JS_LIB}nodejs/filesystem/include.js',
+    'hwc!{PATH_JS_LIB}nodejs/filesystem/Filesystem.js'
 ],function () {
     var $ = this;
 });
